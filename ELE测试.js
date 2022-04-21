@@ -1,22 +1,24 @@
-if(!device.wakeUp()){
+//唤醒手机并解锁
+//请基于自己手机型号自行修改(或者省略此步骤)!!
+/*if(!device.wakeUp()){
     device.wakeUp();
     sleep(1000);
     swipe(500,1751,500,500,500);
     sleep(1000);
-    click(81,1450)
-    click(81,1450)
-    click(374,1450)
-    click(588,1450)
-    click(808,1450)
-    click(265,1450)
-    click(891,1450)
-    click(371,1450)
-    click(171,1450)
-    click(690,1450)
-    click(986,1450)
-    click(911,2034)
+    click(986,1450) // 0
+    click(81,1450)  // 1
+    click(171,1450) // 2
+    click(265,1450) // 3
+    click(374,1450) // 4
+    click(496,1450) // 5
+    click(588,1450) // 6
+    click(690,1450) // 7
+    click(808,1450) // 8
+    click(891,1450) // 9
+    
+    click(911,2034)确定
     sleep(2000);  
-}
+}*/
 
 app.startActivity({
     packageName: "me.ele",
