@@ -55,6 +55,7 @@ while(text("去完成").exists()){
             sleep(1000);
             text("取消").depth(6).click();
         }
+    sleep(1000);
         if(textMatches('浏览.+').exists()){
             sleep(20000);
             toast("浏览结束");
