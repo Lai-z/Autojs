@@ -20,7 +20,8 @@
     click(911,2034)确定
     sleep(2000);  
 }*/
-
+home();
+sleep(1000);
 app.startActivity({
     packageName: "me.ele",
     data: 'eleme://web?&url=https://h5.ele.me/svip/task-list'
