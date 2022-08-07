@@ -1,5 +1,13 @@
-//唤醒手机并解锁
-
+//向上滑动解锁
+if(!device.wakeUp()){
+    device.wakeUp();
+    sleep(1000);
+    swipes(500,1751,500,500,500);
+    sleep(1000);
+}
+//if(text("后面有更多的美食等着你...").exits()){
+//   gesture(1000,[190*device.width/1080,1514*device.height/2400],[903*device.width/1080,1521*device.height/2400]);
+//}
 home();
 sleep(1000);
 app.startActivity({
@@ -14,8 +22,14 @@ threads.start(function(){
     events.observeKey();
   events.onKeyDown("volume_up", function(event){toastLog("\n音量+被按下，即将结束脚本！");sleep(3000);console.hide();exit();});
   });
-  
+home();
+sleep(2000);
 console.log("///////////////");
+app.startActivity({
+    packageName: "me.ele",
+    data: 'eleme://web?&url=https://h5.ele.me/svip/task-list'
+    });
+    text('下单任务').waitFor();
 /*console.log("开始吃货豆报名");
 if(!(textContains("已报名").exists())){
     text("领吃货豆").click();
@@ -126,4 +140,9 @@ function 转跳到别的页面(){
             });
             text('下单任务').waitFor();
             sleep(2000);
+}
+function swipes(x1,y1,x2,y2,time){
+    xx=device.width/1080
+    yy=device.height/2400
+    swipe(xx*x1,yy*y1,xx*x2,yy*y2,500);
 }
